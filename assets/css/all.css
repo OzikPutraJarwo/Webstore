@@ -298,13 +298,13 @@ header .cart .desc .price {
 
 .cart-container .items-wrap .item-split {
   display: grid;
-  grid-template-columns: calc(100% - 290px) 80px 160px 50px;
+  grid-template-columns: calc(100% - 370px) 80px 80px 160px 50px;
   font-size: .9rem;
   font-weight: bold;
   opacity: 0.5;
 }
 
-.cart-container .items-wrap .item-split p:nth-last-child(-n+3) {
+.cart-container .items-wrap .item-split p:nth-last-child(-n+4) {
   text-align: center;
 }
 
@@ -317,7 +317,7 @@ header .cart .desc .price {
 .cart-container .items-wrap .cart-item {
   display: grid;
   font-weight: 500;
-  grid-template-columns: 60px calc(100% - 350px) 80px 160px 50px;
+  grid-template-columns: 60px calc(100% - 430px) 80px 80px 160px 50px;
   line-height: 1.1;
 }
 
@@ -325,6 +325,12 @@ header .cart .desc .price {
   width: 40px;
   height: 40px;
   object-fit: cover;
+}
+
+.cart-container .items-wrap .cart-item .cart-weight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cart-container .items-wrap .remove-all {

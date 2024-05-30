@@ -60,6 +60,7 @@ function renderCart() {
                 <span class="value">${item.amount}</span>
                 <span class="plus" data-index="${index}">+</span>
             </div>
+            <p class="cart-weight">${item.weight}</p>
             <p class="cart-price" price="${item.price * item.amount}">${currency(item.price * item.amount)}</p>
             <button class="remove" data-index="${index}">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512">
@@ -86,6 +87,7 @@ function cartamountEventListeners() {
 
 // CART : Hapus semua item
 function removeAllItems() {
+    document.body.classList.remove("ov");
     localStorage.removeItem('cart');
     renderCart();
 }

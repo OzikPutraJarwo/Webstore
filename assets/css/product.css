@@ -75,20 +75,39 @@
     border-radius: 0 1rem 1rem 0;
 }
 
+#product-wrapper .item .price sub {
+    font-size: 0.8rem !important;
+    margin: 0 !important;
+    text-decoration: unset !important;
+    color: darkgray;
+}
+
+#product-wrapper .item .actions-wrap {
+    transition: .2s all;
+    max-height: 0;
+}
+
+#product-wrapper .item.show .actions-wrap {
+    max-height: unset;
+}
+
 #product-wrapper .item .actions {
+    opacity: 0;
     position: relative;
     overflow: hidden;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
     margin: 0 -1.2rem -1.2rem;
-    padding: 1.2rem 0 0;
+    padding: 1.2rem;
     max-height: 0px;
     transition: .2s all;
+    flex-direction: column;
 }
 
 #product-wrapper .item.show .actions {
+    margin: 0 -1.2rem -1.2rem;
     padding: 1.2rem;
-    max-height: 70px;
+    max-height: 100%;
+    opacity: 1;
 }
 
 #product-wrapper .item .actions .amount {
@@ -96,12 +115,14 @@
     border-radius: 0.2rem;
     display: flex;
     border: 1px solid var(--lightgray);
+    justify-content: space-between;
 }
 
 #product-wrapper .item .actions .minus, #product-wrapper .item .actions .plus {
+    line-height: 0;
     display: flex;
-    width: 27px;
-    height: 27px;
+    width: 100%;
+    height: 30px;
     justify-content: center;
     align-items: center;
     font-weight: bold;
@@ -117,25 +138,29 @@
 }
 
 #product-wrapper .item .actions .value {
-    width: 40px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 0.8rem;
     background: var(--lightgray);
-    user-select: none; 
+    user-select: none;
+    line-height: 0;
 }
 
 #product-wrapper .item .actions .add-to-cart {
     transition: .2s all;
     background: var(--second);
     display: flex;
-    width: 29px;
+    width: 100%;
     align-items: center;
     justify-content: center;
-    border-radius: 100%;
+    border-radius: .2rem;
     cursor: pointer;
+    padding: 0.5rem;
+    margin-top: 1rem;
 }
+
 #product-wrapper .item .actions .add-to-cart:hover {
     background: var(--second-dark);
 }
@@ -155,8 +180,8 @@
     left: 0;
     margin: 1.2rem;
     width: calc(100% - 2.4rem);
-    height: calc(100% - 2.4rem);
-    background: darkseagreen;
+    height: calc(100% - 1.2rem);
+    background: var(--second);
     z-index: 1;
     justify-content: center;
     align-items: center;
